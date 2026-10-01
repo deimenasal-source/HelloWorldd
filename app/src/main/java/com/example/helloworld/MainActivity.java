@@ -9,7 +9,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.widget.Button;
 import android.widget.TextView;
-import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,13 +19,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView textView = findViewById(R.id.textView);
         Button button = findViewById(R.id.button);
-        Button buttonColor = findViewById(R.id.buttonColor);
 
         button.setOnClickListener(v -> {
             textView.setText("Labas pasauli!");
-        });
-        buttonColor.setOnClickListener(v -> {
-            textView.setTextColor(Color.RED);
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
